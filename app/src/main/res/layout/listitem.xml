@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:id="@+id/cl_item"
+    android:background="@drawable/corneredshape"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/appCompatImageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:tint="@color/grey1"
+                android:src="@drawable/upload" />
+            <TextView
+                android:id="@+id/tv_viewcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsbold"
+                android:padding="6dp"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:orientation="vertical"
+
+            >
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:tint="#FF9800"
+                android:src="@drawable/answer" />
+
+            <TextView
+                android:id="@+id/tv_answercount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsbold"
+                android:padding="6dp"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ellipsize="end"
+        android:layout_marginEnd="12dp"
+        android:singleLine="true"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Headline"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/appCompatImageView2"
+        app:layout_constraintTop_toTopOf="@+id/appCompatImageView2"
+        app:layout_constraintVertical_bias="0.187" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView2"
+        app:layout_constraintStart_toEndOf="@+id/appCompatImageView2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_heading"
+        android:gravity="center"
+        app:layout_constraintVertical_bias="0.214">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profileimage"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/whitecornerd"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_decription"
+            app:layout_constraintStart_toEndOf="@+id/tv_decription"
+            app:layout_constraintTop_toTopOf="@+id/tv_decription" />
+
+
+        <TextView
+            android:id="@+id/tv_decription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:text="subheadline"
+            android:textSize="12sp"
+            android:layout_marginLeft="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView2"
+            app:layout_constraintStart_toEndOf="@+id/appCompatImageView2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_heading"
+            app:layout_constraintVertical_bias="0.0"
+
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_postedOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="posted on : 12 Aug"
+        android:textColor="@color/grey1"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_decription" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

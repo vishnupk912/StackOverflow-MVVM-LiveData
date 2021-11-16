@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeActivity">
+
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_margin="24dp"
+        android:background="@drawable/et_shape"
+        android:hint="Search StackOverflow"
+        android:singleLine="true"
+        android:imeOptions="actionSearch"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="14sp"
+        android:paddingStart="12dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/iv_filter"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_filter"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/filter"
+        app:layout_constraintBottom_toBottomOf="@+id/et_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/topcorneredshape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_search">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_adapter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+            tools:listitem="@layout/listitem" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#90000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/whitecornerd"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:id="@+id/ll_python"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:layout_margin="12dp"
+                >
+                <TextView
+                    android:id="@+id/tv_python"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Python"
+
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/grey"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_django"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:layout_margin="12dp"
+
+
+                >
+                <TextView
+                    android:id="@+id/tv_django"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Django"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/grey"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_model"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:layout_margin="12dp"
+
+                >
+                <TextView
+                    android:id="@+id/tv_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Model"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/grey"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_clear"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:layout_margin="12dp"
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clear"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
